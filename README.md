@@ -1,16 +1,16 @@
-# movies_app
+# Movies_App 🎬
 
-A Flutter project built to practice Clean Architecture, with a simple movie listing UI
+#### A Flutter project for browsing and displaying movies content in a structured and user-friendly way, built to practice Clean Architecture.📱
 
-## Getting Started
+### Development Progress 🚨🔻
+✅ - Domain Layer: Done ; 
 
-This project is a starting point for a Flutter application.
+⏳  - Data Layer: In progress :) 
 
-A few resources to get you started if this is your first Flutter project:
+🔲 - Presentation Layer: Not started ...
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Main Features
+- 📺 Now Playing Movies
+- 💥 Popular Movies
+- 🚀 Top Rated Movies
+- 📝	Movies Details
