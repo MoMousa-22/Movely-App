@@ -1,4 +1,4 @@
-# Movely-App 🎬
+# Movies_App 🎬
 
 #### A Flutter project for browsing and displaying movies content in a structured and user-friendly way, built to practice Clean Architecture.📱
 
