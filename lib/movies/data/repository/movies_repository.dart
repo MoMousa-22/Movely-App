@@ -3,9 +3,9 @@ import 'package:movies_app/core/error/exceptions.dart';
 import 'package:movies_app/core/error/failure.dart';
 import 'package:movies_app/movies/data/data_source/movie_remote_data_source.dart';
 import 'package:movies_app/movies/domain/entities/movie.dart';
-import 'package:movies_app/movies/domain/repository/base_movie_repository.dart';
+import 'package:movies_app/movies/domain/repository/base_movies_repository.dart';
 
-class MoviesRepository extends BaseMovieRepository {
+class MoviesRepository extends BaseMoviesRepository {
   final BaseMovieRemoteDataSource baseMovieRemoteDataSource;
   MoviesRepository(this.baseMovieRemoteDataSource);
   @override

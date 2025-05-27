@@ -6,7 +6,9 @@ class ApiConstants {
   static const String popularEndPoint = "movie/popular";
   static const String topRatedEndPoint = "movie/top_rated";
 
-  static const String nowPlayingPath = "$baseUrl+$nowPlayingEndPoint+$apiKey";
-  static const String popularPath = "$baseUrl+$popularEndPoint+$apiKey";
-  static const String topRatedPath = "$baseUrl+$topRatedEndPoint+$apiKey";
+  static const String nowPlayingPath =
+      "$baseUrl$nowPlayingEndPoint?api_key=$apiKey";
+  static const String popularPath = "$baseUrl$popularEndPoint?api_key=$apiKey";
+  static const String topRatedPath =
+      "$baseUrl$topRatedEndPoint?api_key=$apiKey";
 }
