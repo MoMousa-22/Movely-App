@@ -1,9 +1,9 @@
 import '../../movies/domain/entities/movie.dart';
 
 List<Movie> moviesList = [
-  Movie(
+  const Movie(
     backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
-    genreIds: const [
+    genreIds: [
       14,
       28,
       12,
@@ -15,9 +15,9 @@ List<Movie> moviesList = [
     title: "Movie Title",
     voteAverage: 5.0,
   ),
-  Movie(
+  const Movie(
     backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
-    genreIds: const [
+    genreIds: [
       14,
       28,
       12,
@@ -29,9 +29,9 @@ List<Movie> moviesList = [
     title: "Movie Title",
     voteAverage: 5.0,
   ),
-  Movie(
+  const Movie(
     backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
-    genreIds: const [
+    genreIds: [
       14,
       28,
       12,
@@ -43,9 +43,9 @@ List<Movie> moviesList = [
     title: "Movie Title",
     voteAverage: 5.0,
   ),
-  Movie(
+  const Movie(
     backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
-    genreIds: const [
+    genreIds: [
       14,
       28,
       12,
@@ -57,9 +57,9 @@ List<Movie> moviesList = [
     title: "Movie Title",
     voteAverage: 5.0,
   ),
-  Movie(
+  const Movie(
     backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
-    genreIds: const [
+    genreIds: [
       14,
       28,
       12,
@@ -71,9 +71,9 @@ List<Movie> moviesList = [
     title: "Movie Title",
     voteAverage: 5.0,
   ),
-  Movie(
+  const Movie(
     backdropPath: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
-    genreIds: const [
+    genreIds: [
       14,
       28,
       12,

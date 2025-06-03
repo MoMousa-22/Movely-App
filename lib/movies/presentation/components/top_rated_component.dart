@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/presentation/controller/movies_bloc.dart';
 import 'package:movies_app/movies/presentation/controller/movies_state.dart';
+import 'package:movies_app/movies/presentation/widgets/loading_indicator.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../core/network/constants/api_constants.dart';
@@ -18,15 +19,9 @@ class TopRatedComponent extends StatelessWidget {
       buildWhen: (previous, current) =>
           previous.topRatedState != current.topRatedState,
       builder: (context, state) {
-        print("BlocBuilder TopRatedComponent");
         switch (state.topRatedState) {
           case RequestState.loading:
-            return SizedBox(
-              height: 150,
-              child: Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
+            return const LoadingIndicator();
           case RequestState.loaded:
             return FadeIn(
               duration: const Duration(milliseconds: 500),

@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/movies/presentation/controller/movies_bloc.dart';
 import 'package:movies_app/movies/presentation/controller/movies_state.dart';
+import 'package:movies_app/movies/presentation/screens/movie_detail_screen.dart';
+import 'package:movies_app/movies/presentation/widgets/loading_indicator.dart';
 
 import '../../../core/network/constants/api_constants.dart';
 import '../../../core/utils/enums.dart';
@@ -21,20 +23,14 @@ class NowPlayingComponent extends StatelessWidget {
         print("BlocBuilder NowPlayingComponent");
         switch (state.nowPlayingState) {
           case RequestState.loading:
-            print("Loading");
-            return SizedBox(
-              height: 400,
-              child: Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
+            return const LoadingIndicator();
           case RequestState.loaded:
             return FadeIn(
               duration: const Duration(milliseconds: 500),
               child: CarouselSlider(
                 options: CarouselOptions(
                   height: 400.0,
-                  viewportFraction: 0.96,
+                  viewportFraction: 0.85,
                   onPageChanged: (index, reason) {},
                 ),
                 items: state.nowPlayingMovies.map(
@@ -42,7 +38,16 @@ class NowPlayingComponent extends StatelessWidget {
                     return GestureDetector(
                       key: const Key('openMovieMinimalDetail'),
                       onTap: () {
-                        /// TODO : NAVIGATE TO MOVIE DETAILS
+                        print("Tpped");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                MovieDetailScreen(
+                              id: item.id,
+                            ),
+                          ),
+                        );
                       },
                       child: Stack(
                         children: [
