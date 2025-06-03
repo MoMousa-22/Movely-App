@@ -8,9 +8,7 @@ class RecommendationModel extends Recommendation {
 
   factory RecommendationModel.fromJson(Map<String, dynamic> json) =>
       RecommendationModel(
-        /// TODO Placeholder
         backdropPath: json['backdrop_path'],
-
         id: json['id'],
       );
 }

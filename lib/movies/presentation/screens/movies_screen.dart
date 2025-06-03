@@ -41,7 +41,7 @@ class MoviesScreen extends StatelessWidget {
                     /// TODO : NAVIGATION TO Top Rated Movies Screen
                   }),
               const TopRatedComponent(),
-              const SizedBox(height: 50.0),
+              const SizedBox(height: 30.0),
             ],
           ),
         ),
