@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:movies_app/core/utils/app_strings.dart';
 import 'package:movies_app/movies/presentation/screens/movies_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -111,7 +112,7 @@ class _SplashScreenState extends State<SplashScreen>
                       child: SlideTransition(
                         position: _filmySlide,
                         child: const Text(
-                          'FILMY',
+                          AppStrings.filmy,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 35,
@@ -124,7 +125,7 @@ class _SplashScreenState extends State<SplashScreen>
                   ),
                   const SizedBox(height: 12),
                   const Text(
-                    'Tap. Watch. Get hooked.',
+                    AppStrings.splashDescription,
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 15,

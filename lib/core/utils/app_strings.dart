@@ -7,4 +7,6 @@ class AppStrings {
   static const noRecommendationsAvailableForThisMovie =
       'No recommendations available for this movie';
   static const genres = 'Genres';
+  static const filmy = 'FILMY';
+  static const splashDescription = 'Tap. Watch. Get hooked.';
 }
