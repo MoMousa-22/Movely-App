@@ -3,12 +3,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/utils/enums.dart';
-import 'package:movies_app/movies/presentation/controller/movies_bloc.dart';
-import 'package:movies_app/movies/presentation/controller/movies_state.dart';
+import 'package:movies_app/movies/presentation/controller/movies_bloc/movies_bloc.dart';
 import 'package:movies_app/movies/presentation/widgets/loading_indicator.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../core/network/constants/api_constants.dart';
+import '../controller/movies_bloc/movies_state.dart';
 
 class PopularComponent extends StatelessWidget {
   const PopularComponent({super.key});

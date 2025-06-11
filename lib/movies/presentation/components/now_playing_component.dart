@@ -3,13 +3,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/movies/presentation/controller/movies_bloc.dart';
-import 'package:movies_app/movies/presentation/controller/movies_state.dart';
+import 'package:movies_app/movies/presentation/controller/movies_bloc/movies_bloc.dart';
 import 'package:movies_app/movies/presentation/screens/movie_detail_screen.dart';
 import 'package:movies_app/movies/presentation/widgets/loading_indicator.dart';
 
 import '../../../core/network/constants/api_constants.dart';
 import '../../../core/utils/enums.dart';
+import '../controller/movies_bloc/movies_state.dart';
 
 class NowPlayingComponent extends StatelessWidget {
   const NowPlayingComponent({super.key});
@@ -20,7 +20,6 @@ class NowPlayingComponent extends StatelessWidget {
       buildWhen: (previous, current) =>
           previous.nowPlayingState != current.nowPlayingState,
       builder: (context, state) {
-        print("BlocBuilder NowPlayingComponent");
         switch (state.nowPlayingState) {
           case RequestState.loading:
             return const LoadingIndicator();

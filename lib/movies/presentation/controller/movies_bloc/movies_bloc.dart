@@ -6,9 +6,8 @@ import 'package:movies_app/core/utils/enums.dart';
 import 'package:movies_app/movies/domain/use_cases/get_now_playing_movies_use_case.dart';
 import 'package:movies_app/movies/domain/use_cases/get_popular_movies_use_case.dart';
 import 'package:movies_app/movies/domain/use_cases/get_top_rated_movies_use_case.dart';
-import 'package:movies_app/movies/presentation/controller/movies_state.dart';
-
 import 'movies_events.dart';
+import 'movies_state.dart';
 
 class MoviesBloc extends Bloc<MoviesEvents, MoviesState> {
   final GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase;

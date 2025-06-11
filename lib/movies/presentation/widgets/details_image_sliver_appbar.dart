@@ -2,7 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/movies/presentation/controller/movie_details_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_state.dart';
 
 import '../../../core/network/constants/api_constants.dart';
 
@@ -18,7 +19,7 @@ class DetailsImageSliverAppbar extends StatelessWidget {
             expandedHeight: 250.0,
             flexibleSpace: FlexibleSpaceBar(
               background: FadeIn(
-                duration: const Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 750),
                 child: ShaderMask(
                   shaderCallback: (rect) {
                     return const LinearGradient(

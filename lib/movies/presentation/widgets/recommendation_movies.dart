@@ -2,10 +2,10 @@ import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/movies/presentation/controller/movie_details_bloc.dart';
+import 'package:movies_app/core/network/constants/api_constants.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_state.dart';
 import 'package:shimmer/shimmer.dart';
-
-import '../../../core/network/constants/api_constants.dart';
 
 class RecommendationMovies extends StatelessWidget {
   const RecommendationMovies({super.key});

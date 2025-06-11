@@ -7,8 +7,8 @@ import 'package:movies_app/movies/domain/use_cases/get_now_playing_movies_use_ca
 import 'package:movies_app/movies/domain/use_cases/get_popular_movies_use_case.dart';
 import 'package:movies_app/movies/domain/use_cases/get_recommendation_use_case.dart';
 import 'package:movies_app/movies/domain/use_cases/get_top_rated_movies_use_case.dart';
-import 'package:movies_app/movies/presentation/controller/movie_details_bloc.dart';
-import 'package:movies_app/movies/presentation/controller/movies_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_bloc/movies_bloc.dart';
 
 final sl = GetIt.instance;
 

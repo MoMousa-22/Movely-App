@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/core/utils/app_strings.dart';
-import 'package:movies_app/movies/presentation/controller/movie_details_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_state.dart';
 import 'package:movies_app/movies/presentation/widgets/show_duration.dart';
 import 'package:movies_app/movies/presentation/widgets/show_genres.dart';
 

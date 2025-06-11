@@ -1,16 +1,12 @@
 import 'dart:async';
 
-import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/core/utils/enums.dart';
-import 'package:movies_app/movies/domain/entities/recommendation.dart';
-import 'package:movies_app/movies/domain/use_cases/get_movies_details_use_case.dart';
-import 'package:movies_app/movies/domain/use_cases/get_recommendation_use_case.dart';
 
-import '../../domain/entities/movie_details.dart';
-
-part 'movie_details_event.dart';
-part 'movie_details_state.dart';
+import '../../../../core/utils/enums.dart';
+import '../../../domain/use_cases/get_movies_details_use_case.dart';
+import '../../../domain/use_cases/get_recommendation_use_case.dart';
+import 'movie_details_event.dart';
+import 'movie_details_state.dart';
 
 class MovieDetailsBloc extends Bloc<MovieDetailsEvent, MovieDetailsState> {
   MovieDetailsBloc(this.getMoviesDetailsUseCase, this.getRecommendationUseCase)

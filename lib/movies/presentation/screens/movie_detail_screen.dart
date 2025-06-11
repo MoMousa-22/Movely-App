@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_app/movies/presentation/controller/movie_details_bloc.dart';
+import 'package:movies_app/core/services/services_locator.dart';
+import 'package:movies_app/core/utils/enums.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_event.dart';
+import 'package:movies_app/movies/presentation/controller/movies_details_bloc/movie_details_state.dart';
 import 'package:movies_app/movies/presentation/widgets/details_image_sliver_appbar.dart';
 import 'package:movies_app/movies/presentation/widgets/details_text_sliver.dart';
 import 'package:movies_app/movies/presentation/widgets/loading_indicator.dart';
 import 'package:movies_app/movies/presentation/widgets/more_like_this_text.dart';
 import 'package:movies_app/movies/presentation/widgets/show_recommendations.dart';
-
-import '../../../core/services/services_locator.dart';
-import '../../../core/utils/enums.dart';
 
 class MovieDetailScreen extends StatelessWidget {
   final int id;
