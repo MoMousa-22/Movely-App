@@ -4,11 +4,13 @@ import 'package:movies_app/core/utils/app_strings.dart';
 import 'package:movies_app/movies/presentation/components/now_playing_component.dart';
 import 'package:movies_app/movies/presentation/components/popular_component.dart';
 import 'package:movies_app/movies/presentation/components/top_rated_component.dart';
-import 'package:movies_app/movies/presentation/controller/movies_bloc.dart';
-import 'package:movies_app/movies/presentation/controller/movies_events.dart';
+import 'package:movies_app/movies/presentation/controller/movies_bloc/movies_bloc.dart';
+import 'package:movies_app/movies/presentation/controller/movies_bloc/movies_state.dart';
+import 'package:movies_app/movies/presentation/screens/type_movies_screen.dart';
 import 'package:movies_app/movies/presentation/widgets/section_header.dart';
 
 import '../../../core/services/services_locator.dart';
+import '../controller/movies_bloc/movies_events.dart';
 
 class MoviesScreen extends StatelessWidget {
   const MoviesScreen({super.key});
@@ -29,17 +31,28 @@ class MoviesScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const NowPlayingComponent(),
-              SectionHeader(
+              BlocBuilder<MoviesBloc, MoviesState>(
+                builder: (context, state) => SectionHeader(
                   title: AppStrings.popular,
                   onTap: () {
-                    /// TODO : NAVIGATION TO POPULAR SCREEN
-                  }),
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => TypeMoviesScreen(
+                            movies: state.popularMovies,
+                            moviesType: AppStrings.popular)));
+                  },
+                ),
+              ),
               const PopularComponent(),
-              SectionHeader(
-                  title: AppStrings.topRated,
-                  onTap: () {
-                    /// TODO : NAVIGATION TO Top Rated Movies Screen
-                  }),
+              BlocBuilder<MoviesBloc, MoviesState>(
+                builder: (context, state) => SectionHeader(
+                    title: AppStrings.topRated,
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => TypeMoviesScreen(
+                              movies: state.topRatedMovies,
+                              moviesType: AppStrings.topRated)));
+                    }),
+              ),
               const TopRatedComponent(),
               const SizedBox(height: 30.0),
             ],
